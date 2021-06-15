@@ -24,4 +24,6 @@ Route.get('/', async ({ view }) => {
   return view.render('welcome')
 })
 
-Route.post('render', 'RenderController.renderFromText')
+Route.group(() => {
+  Route.post('render', 'RenderController.renderFromText')
+}).prefix('api/v1')
