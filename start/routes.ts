@@ -21,7 +21,8 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', async ({ view }) => {
-  return view.render('welcome')
+	const specUrl = '/swagger.json'
+	return view.render('swagger', { specUrl })
 })
 
 Route.group(() => {
