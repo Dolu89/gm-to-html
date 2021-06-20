@@ -1,1 +1,38 @@
-{"openapi":"3.0.0","info":{"title":"Github Markup (GM) to HTML","version":"1.0.0","description":"Github Markup to HTML API aims to generate an HTML template from any markup supported by Github"},"paths":{"/api/v1/render":{"post":{"tags":["Render"],"security":[],"description":"Render using markup extension and content","requestBody":{"required":true,"content":{"application/json":{"schema":{"properties":{"markup":{"type":"string","example":"mediawiki","required":true},"content":{"type":"string","example":"===My wiki title===","required":true}}}}}},"produces":["text/html"],"responses":{"200":{"description":"Success"}}}}},"components":{},"tags":[]}
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Github Markup (GM) to HTML",
+    "version": "1.0.0",
+    "description": "Github Markup to HTML API aims to generate an HTML template from any markup supported by Github"
+  },
+  "paths": {
+    "/api/v1/render": {
+      "post": {
+        "tags": ["Render"],
+        "security": [],
+        "description": "Render using markup extension and content",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "markup": { "type": "string", "example": "mediawiki", "required": true },
+                  "content": {
+                    "type": "string",
+                    "example": "===My wiki title===",
+                    "required": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "produces": ["text/html"],
+        "responses": { "200": { "description": "Success" } }
+      }
+    }
+  },
+  "components": {},
+  "tags": []
+}
